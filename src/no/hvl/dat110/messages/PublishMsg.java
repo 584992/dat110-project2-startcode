@@ -44,7 +44,7 @@ public class PublishMsg extends Message {
 
 	@Override
 	public String toString() {
-		return "Message [type=" + super.getType() + ", message=" + message + ", user=" + super.getUser() + "]";
+		return "Message [type=" + super.getType() + ", topic=" + topic + ", message=" + message + ", user=" + super.getUser() + "]";
 	};
 
 }
