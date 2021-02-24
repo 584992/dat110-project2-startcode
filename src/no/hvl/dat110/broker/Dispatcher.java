@@ -146,10 +146,8 @@ public class Dispatcher extends Stopable {
 
 		// TODO: subscribe user to the topic
 		// user and topic is contained in the subscribe message
+		storage.addSubscriber(msg.getUser(), msg.getTopic());
 		
-		
-		throw new UnsupportedOperationException(TODO.method());
-
 	}
 
 	/**
@@ -162,8 +160,8 @@ public class Dispatcher extends Stopable {
 
 		// TODO: unsubscribe user to the topic
 		// user and topic is contained in the unsubscribe message
+		storage.removeSubscriber(msg.getUser(), msg.getTopic());
 		
-		throw new UnsupportedOperationException(TODO.method());
 	}
 
 	/**
@@ -177,8 +175,9 @@ public class Dispatcher extends Stopable {
 		// TODO: publish the message to clients subscribed to the topic
 		// topic and message is contained in the subscribe message
 		// messages must be sent used the corresponding client session objects
+		ClientSession clientsession = storage.getSession(msg.getUser());
 		
-		throw new UnsupportedOperationException(TODO.method());
-
+		clientsession.send(msg);
+		
 	}
 }
