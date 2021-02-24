@@ -9,6 +9,7 @@ import no.hvl.dat110.common.Stopable;
 import no.hvl.dat110.messages.*;
 import no.hvl.dat110.messagetransport.Connection;
 
+
 public class Dispatcher extends Stopable {
 
 	private Storage storage;
@@ -106,6 +107,10 @@ public class Dispatcher extends Stopable {
 
 	}
 
+	/**
+	 * @author vilde
+	 * @param msg
+	 */
 	public void onCreateTopic(CreateTopicMsg msg) {
 
 		Logger.log("onCreateTopic:" + msg.toString());
@@ -117,6 +122,10 @@ public class Dispatcher extends Stopable {
 
 	}
 
+	/**
+	 * @author vilde
+	 * @param msg
+	 */
 	public void onDeleteTopic(DeleteTopicMsg msg) {
 
 		Logger.log("onDeleteTopic:" + msg.toString());
@@ -127,6 +136,11 @@ public class Dispatcher extends Stopable {
 		throw new UnsupportedOperationException(TODO.method());
 	}
 
+	
+	/**
+	 * @author vilde
+	 * @param msg
+	 */
 	public void onSubscribe(SubscribeMsg msg) {
 
 		Logger.log("onSubscribe:" + msg.toString());
@@ -138,6 +152,10 @@ public class Dispatcher extends Stopable {
 
 	}
 
+	/**
+	 * @author vilde
+	 * @param msg
+	 */
 	public void onUnsubscribe(UnsubscribeMsg msg) {
 
 		Logger.log("onUnsubscribe:" + msg.toString());
@@ -148,6 +166,10 @@ public class Dispatcher extends Stopable {
 		throw new UnsupportedOperationException(TODO.method());
 	}
 
+	/**
+	 * @author vilde
+	 * @param msg
+	 */
 	public void onPublish(PublishMsg msg) {
 
 		Logger.log("onPublish:" + msg.toString());
