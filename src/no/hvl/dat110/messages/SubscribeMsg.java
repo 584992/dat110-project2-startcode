@@ -3,7 +3,7 @@ package no.hvl.dat110.messages;
 
 /**
  * 
- * @author Regine
+ * @author Magnus
  *
  */
 public class SubscribeMsg extends Message {
@@ -12,6 +12,12 @@ public class SubscribeMsg extends Message {
 
 	// TODO:
 	// Implement object variables - a topic is required
+	String topic;
+	
+	public SubscribeMsg(String user, String topic) {
+		super(MessageType.SUBSCRIBE, user);
+		this.topic = topic;
+	}
 
 	// Constructor, get/set-methods, and toString method
 	// as described in the project text
