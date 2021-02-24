@@ -60,17 +60,20 @@ public class Storage {
 	 */
 	public void addClientSession(String user, Connection connection) {
 
+		clients.putIfAbsent(user, new ClientSession(user, connection));
 		
-		
-		throw new UnsupportedOperationException(TODO.method());
 
 	}
 
+	/**
+	 * @author Emma
+	 * @param user -- we are removing this users session.
+	 * 
+	 * remove client session for user from the storage
+	 */
 	public void removeClientSession(String user) {
 
-		// TODO: remove client session for user from the storage
-
-		throw new UnsupportedOperationException(TODO.method());
+		clients.remove(user);
 
 	}
 
