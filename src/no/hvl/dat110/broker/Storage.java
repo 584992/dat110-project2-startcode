@@ -77,14 +77,19 @@ public class Storage {
 	public void createTopic(String topic) {
 
 		// TODO: create topic in the storage
-
+		
 		throw new UnsupportedOperationException(TODO.method());
 
 	}
-
+	
+	/**
+	 * @author Magnus
+	 * @param topic -- topic to be removed
+	 */
 	public void deleteTopic(String topic) {
 
 		// TODO: delete topic from the storage
+		subscriptions.remove(topic);
 
 		throw new UnsupportedOperationException(TODO.method());
 
