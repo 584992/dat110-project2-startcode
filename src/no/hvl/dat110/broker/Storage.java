@@ -50,10 +50,18 @@ public class Storage {
 
 	}
 
+	
+	/**
+	 * @author Emma
+	 * @param user -- user to connect to session
+	 * @param connection -- 
+	 * 
+	 * add corresponding client session to the storage
+	 */
 	public void addClientSession(String user, Connection connection) {
 
-		// TODO: add corresponding client session to the storage
-
+		
+		
 		throw new UnsupportedOperationException(TODO.method());
 
 	}
@@ -87,7 +95,7 @@ public class Storage {
 	 * @param user  -- person to subscribe to topic
 	 * @param topic -- topic user subscribes to.
 	 * 
-	 *              add the user as subscriber to the topic
+	 *  add the user as subscriber to the topic
 	 */
 	public void addSubscriber(String user, String topic) {
 
