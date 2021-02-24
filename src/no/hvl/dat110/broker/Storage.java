@@ -1,11 +1,11 @@
 package no.hvl.dat110.broker;
 
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import no.hvl.dat110.common.TODO;
-import no.hvl.dat110.common.Logger;
 import no.hvl.dat110.messagetransport.Connection;
 
 public class Storage {
@@ -52,7 +52,7 @@ public class Storage {
 
 	
 	/**
-	 * @author Emma
+	 * @author Emma & Magnus
 	 * @param user -- user to connect to session
 	 * @param connection -- 
 	 * 
@@ -77,11 +77,13 @@ public class Storage {
 
 	}
 
+	/**
+	 * @author Emma
+	 * @param topic
+	 */
 	public void createTopic(String topic) {
-
-		// TODO: create topic in the storage
 		
-		throw new UnsupportedOperationException(TODO.method());
+		subscriptions.putIfAbsent(topic, new HashSet<String>());
 
 	}
 	
