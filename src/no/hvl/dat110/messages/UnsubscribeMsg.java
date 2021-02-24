@@ -1,5 +1,10 @@
 package no.hvl.dat110.messages;
 
+/**
+ * 
+ * @author Emma
+ *
+ */
 public class UnsubscribeMsg extends Message {
 
 	// message sent from client to unsubscribe on a topic 

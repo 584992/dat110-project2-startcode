@@ -1,5 +1,11 @@
 package no.hvl.dat110.messages;
 
+
+/**
+ * 
+ * @author Regine
+ *
+ */
 public class SubscribeMsg extends Message {
 
 	// message sent from client to subscribe on a topic 
