@@ -82,7 +82,6 @@ public class Storage {
 	 * @param topic
 	 */
 	public void createTopic(String topic) {
-		
 		subscriptions.putIfAbsent(topic, new HashSet<String>());
 
 	}
@@ -95,8 +94,6 @@ public class Storage {
 
 		// TODO: delete topic from the storage
 		subscriptions.remove(topic);
-
-		throw new UnsupportedOperationException(TODO.method());
 
 	}
 
