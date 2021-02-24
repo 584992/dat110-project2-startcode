@@ -81,6 +81,7 @@ public class Storage {
 
 		// TODO: create topic in the storage
 		
+		
 		throw new UnsupportedOperationException(TODO.method());
 
 	}
@@ -93,8 +94,6 @@ public class Storage {
 
 		// TODO: delete topic from the storage
 		subscriptions.remove(topic);
-
-		throw new UnsupportedOperationException(TODO.method());
 
 	}
 
