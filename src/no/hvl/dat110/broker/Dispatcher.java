@@ -117,9 +117,7 @@ public class Dispatcher extends Stopable {
 
 		// TODO: create the topic in the broker storage
 		// the topic is contained in the create topic message
-		
-
-		throw new UnsupportedOperationException(TODO.method());
+		storage.createTopic(msg.getTopic());
 
 	}
 
@@ -133,8 +131,8 @@ public class Dispatcher extends Stopable {
 
 		// TODO: delete the topic from the broker storage
 		// the topic is contained in the delete topic message
+		storage.deleteTopic(msg.getTopic());
 		
-		throw new UnsupportedOperationException(TODO.method());
 	}
 
 	
@@ -148,6 +146,7 @@ public class Dispatcher extends Stopable {
 
 		// TODO: subscribe user to the topic
 		// user and topic is contained in the subscribe message
+		
 		
 		throw new UnsupportedOperationException(TODO.method());
 
