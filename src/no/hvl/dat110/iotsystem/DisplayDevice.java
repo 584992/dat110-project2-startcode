@@ -1,5 +1,8 @@
 package no.hvl.dat110.iotsystem;
 
+import no.hvl.dat110.broker.Broker;
+import no.hvl.dat110.broker.Dispatcher;
+import no.hvl.dat110.broker.Storage;
 import no.hvl.dat110.client.Client;
 import no.hvl.dat110.messages.Message;
 import no.hvl.dat110.messages.PublishMsg;
@@ -16,6 +19,7 @@ public class DisplayDevice {
 		// TODO - START
 				
 		// create a client object and use it to
+		Client client = new Client();
 		
 		// - connect to the broker
 		// - create the temperature topic on the broker
