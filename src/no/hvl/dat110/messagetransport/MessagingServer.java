@@ -22,7 +22,7 @@ public class MessagingServer {
 	}
 
 	// accept an incoming connection from a client
-	public Connection accept () {
+	public Connection accept () throws IOException {
 		
 		Connection connection = null;
 		
@@ -40,7 +40,7 @@ public class MessagingServer {
 			System.out.println("Messaging server: " + ex.getMessage());
 			ex.printStackTrace();
 			// TODO: closing welcomeSocket
-			connection.close();
+			welcomeSocket.close();
 		}
 		
 		return connection;
