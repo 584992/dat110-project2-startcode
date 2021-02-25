@@ -168,18 +168,21 @@ public class Dispatcher extends Stopable {
 	}
 
 	/**
-	 * @author vilde
+	 * @author Emma
 	 * @param msg
 	 */
 	public void onPublish(PublishMsg msg) {
-
-		Logger.log("onPublish:" + msg.toString());
-
-		// TODO: publish the message to clients subscribed to the topic
+		
+		// publish the message to clients subscribed to the topic
 		// topic and message is contained in the subscribe message
 		// messages must be sent used the corresponding client session objects
-		
-		throw new UnsupportedOperationException(TODO.method());
 
+		Logger.log("onPublish:" + msg.toString());
+		
+		Set<String> subscribers = storage.getSubscribers(msg.getTopic());
+		
+//		subscribers.forEach(x- > new ClientSession(x, //conection her
+//				).send(msg));
+		
 	}
 }
