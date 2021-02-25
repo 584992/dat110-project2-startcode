@@ -165,7 +165,7 @@ public class Dispatcher extends Stopable {
 	}
 
 	/**
-	 * @author Emma
+	 * @author Vilde
 	 * @param msg
 	 */
 	public void onPublish(PublishMsg msg) {
@@ -176,7 +176,7 @@ public class Dispatcher extends Stopable {
 
 		Logger.log("onPublish:" + msg.toString());
 		
-		Set<String> subscribers = storage.getSubscribers(msg.getTopic());
+//		Set<String> subscribers = storage.getSubscribers(msg.getTopic());
 		
 //		subscribers.forEach(x- > new ClientSession(x, //conection her
 //				).send(msg));
