@@ -177,10 +177,15 @@ public class Dispatcher extends Stopable {
 		Logger.log("onPublish:" + msg.toString());
 		
 		
+		System.out.println("TOPIC ER: ");
+		System.out.println(msg.getTopic());
+		
 		Set<String> subscribers = storage.getSubscribers(msg.getTopic());
 		
+		subscribers.forEach(x -> storage.getSession(x).send(msg));
 		
-		subscribers.forEach(x -> storage.getSession(msg.getUser()).send(msg)); //Noe sånt?
+	
+//		subscribers.forEach(x -> storage.getSession(msg.getUser()).send(msg)); //Noe sånt?
 		
 //		subscribers.forEach(x- > new ClientSession(x, //conection her
 //				).send(msg));
