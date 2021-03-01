@@ -30,10 +30,13 @@ public class DisplayDevice {
 		// TODO - START
 				
 		// create a client object and use it to
-		Client client = new Client();
-		
+		Client client = null;
+				
 		// - connect to the broker
+
+		
 		// - create the temperature topic on the broker
+		
 		// - subscribe to the topic
 		// - receive messages on the topic
 		// - unsubscribe from the topic
