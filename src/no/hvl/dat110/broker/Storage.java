@@ -92,7 +92,6 @@ public class Storage {
 	 */
 	public void deleteTopic(String topic) {
 
-		// TODO: delete topic from the storage
 		subscriptions.remove(topic);
 
 	}
