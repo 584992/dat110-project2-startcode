@@ -105,7 +105,7 @@ public class Storage {
 	 *  add the user as subscriber to the topic
 	 */
 	public void addSubscriber(String user, String topic) {
-
+		System.out.println(user + " user, "+ topic + " topic");
 		subscriptions.get(topic).add(user);
 	}
 

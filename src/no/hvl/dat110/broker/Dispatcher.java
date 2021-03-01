@@ -141,7 +141,7 @@ public class Dispatcher extends Stopable {
 	 * @param msg
 	 */
 	public void onSubscribe(SubscribeMsg msg) {
-
+		msg.toString();
 		Logger.log("onSubscribe:" + msg.toString());
 
 		// TODO: subscribe user to the topic
