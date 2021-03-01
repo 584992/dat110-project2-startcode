@@ -19,7 +19,7 @@ public class PublishMsg extends Message {
 
 	// Constructor, get/set-methods, and toString method
 
-	public PublishMsg(String message, String topic, String user) {
+	public PublishMsg(String user, String topic, String message) {
 		super(MessageType.PUBLISH, user);
 		this.message = message;
 		this.topic = topic;

@@ -16,7 +16,7 @@ public class UnsubscribeMsg extends Message {
 	String topic;
 
 	// Constructor, get/set-methods, and toString method
-	public UnsubscribeMsg(String topic, String user) {
+	public UnsubscribeMsg(String user, String topic) {
 		super(MessageType.UNSUBSCRIBE, user);
 		this.topic = topic;
 	}
