@@ -3,6 +3,11 @@ package no.hvl.dat110.iotsystem;
 import no.hvl.dat110.client.Client;
 import no.hvl.dat110.common.TODO;
 
+/**
+ * 
+ * @author Regine
+ *
+ */
 public class TemperatureDevice {
 
 	private static final int COUNT = 10;
@@ -15,8 +20,13 @@ public class TemperatureDevice {
 		// TODO - start
 
 		// create a client object and use it to
-
+		Client client = null;
 		// - connect to the broker
+		client.connect();
+		//client.publish(topic, message);
+		
+
+		
 		// - publish the temperature(s)
 		// - disconnect from the broker
 
@@ -24,7 +34,6 @@ public class TemperatureDevice {
 
 		System.out.println("Temperature device stopping ... ");
 
-		throw new UnsupportedOperationException(TODO.method());
 
 	}
 }
