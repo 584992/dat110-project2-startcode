@@ -1,6 +1,7 @@
 package no.hvl.dat110.broker;
 
 import java.util.Collection;
+import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
@@ -73,8 +74,15 @@ public class Storage {
 	 */
 	public void removeClientSession(String user) {
 
+		clients.get(user).disconnect();
 		clients.remove(user);
 
+		Enumeration<String> keys = subscriptions.keys();
+		while (keys.hasMoreElements()) {
+			String topic = keys.nextElement();
+			subscriptions.get(topic).removeIf(u -> u.equals(user));
+		}
+		
 	}
 
 	/**
