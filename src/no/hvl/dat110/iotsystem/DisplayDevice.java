@@ -42,7 +42,10 @@ public class DisplayDevice {
 		client.subscribe(Common.TEMPTOPIC);
 		
 		// - receive messages on the topic
-		client.receive();
+		for (int i = 0; i < COUNT; i++) {
+			PublishMsg msg = (PublishMsg) client.receive();
+			System.out.println("DISPLAY: " + msg.getMessage());
+		}
 		
 		// - unsubscribe from the topic
 		client.unsubscribe(Common.TEMPTOPIC);

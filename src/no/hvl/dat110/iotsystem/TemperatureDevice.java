@@ -25,8 +25,16 @@ public class TemperatureDevice {
 		// - connect to the broker
 		client.connect();
 		// - publish the temperature(s)
-		int temp = sn.read();
-		client.publish(Common.TEMPTOPIC, String.valueOf(temp));
+		for (int i = 0; i < COUNT; i++) {
+			int temp = sn.read();
+			client.publish(Common.TEMPTOPIC, String.valueOf(temp));
+			try {
+				Thread.sleep(4500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		
 		// - disconnect from the broker
 		client.disconnect();
 
